@@ -7,4 +7,4 @@ node {
 		sh "${mvnHome}/bin/apache-maven-3.6.1"
 	}
 	
-}
+
