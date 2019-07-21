@@ -1,4 +1,4 @@
-jsp {
+node {
 	stage('SCM checkout'){
 		git 'https://github.com/RAJKRANJ/jenkinfileTest.git'
 	}
