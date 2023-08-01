@@ -30,5 +30,24 @@ pipeline{
             }
             
         }
+        stage('Nexus Pull'){
+            steps{
+                nexusArtifactUploader artifacts: [
+[
+artifactId: 'testPipeline', 
+classifier: '', 
+file: 'target/testPipeline.war', 
+type: 'war'
+]
+], 
+credentialsId: 'Nexus-User', 
+groupId: 'com.app.web', 
+nexusUrl: '3.93.10.183:8081/', 
+nexusVersion: 'nexus3', 
+protocol: 'https', 
+repository: 'JAVA-Webapp/', 
+version: '4.0.0'
+            }
+        }
     }
 }
