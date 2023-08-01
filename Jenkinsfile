@@ -53,7 +53,7 @@ version: '4.0.0'
             steps{
                 sshagent(['ubuntu']) {
                     sh """
-                    scp -0 StrictHostKeyChecking=no target/testPipeline.war ubuntu@34.238.50.219:/opt/tomcat/webapps/
+                    scp -o StrictHostKeyChecking=no target/testPipeline.war ubuntu@34.238.50.219:/opt/tomcat/webapps/
                     ssh -o StrictHostKeyChecking=no ubuntu@34.238.50.219 stoptomcat
                     ssh -o StrictHostKeyChecking=no  ubuntu@34.238.50.219 startomcat
                     """
