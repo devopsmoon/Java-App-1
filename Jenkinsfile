@@ -41,7 +41,7 @@ type: 'war'
 ]
 ], 
 credentialsId: 'Nexus-User', 
-groupId: 'com.app.web', 
+groupId: 'com.web', 
 nexusUrl: '3.93.10.183:8081/', 
 nexusVersion: 'nexus3', 
 protocol: 'https', 
