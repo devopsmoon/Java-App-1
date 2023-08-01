@@ -49,5 +49,16 @@ repository: 'Java-Webapp1/',
 version: '4.0.0'
             }
         }
+        stage('deploy to Tomcat Server'){
+            steps{
+                sshagent(['ubuntu']) {
+                    ssh """
+                    scp -0 StrictHostKeyChecking=no target/testPipeline.war ubuntu@34.238.50.219:/opt/tomcat/webapps/
+                    ssh -o StrictHostKeyChecking=no ubuntu@34.238.50.219 stoptomcat
+                    ssh -o StrictHostKeyChecking=no  ubuntu@34.238.50.219 startomcat
+                    """
+                }
+            }
+        }
     }
 }
