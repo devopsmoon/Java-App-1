@@ -44,7 +44,7 @@ credentialsId: 'Nexus-User',
 groupId: 'com.web', 
 nexusUrl: '3.93.10.183:8081/', 
 nexusVersion: 'nexus3', 
-protocol: 'https', 
+protocol: 'http', 
 repository: 'Java-Webapp1/', 
 version: '4.0.0'
             }
