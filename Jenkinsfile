@@ -45,7 +45,7 @@ groupId: 'com.app.web',
 nexusUrl: '3.93.10.183:8081/', 
 nexusVersion: 'nexus3', 
 protocol: 'https', 
-repository: 'JAVA-Webapp/', 
+repository: 'Java-Webapp1/', 
 version: '4.0.0'
             }
         }
