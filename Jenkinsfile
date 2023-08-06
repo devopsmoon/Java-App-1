@@ -14,5 +14,10 @@ pipeline{
                 echo "welcome to devops world"
             }
         }
+        stage('build'){
+            steps{
+                sh 'mvn clean package'
+            }
+        }
     }
 }
