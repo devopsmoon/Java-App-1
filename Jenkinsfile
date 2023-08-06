@@ -10,7 +10,7 @@ pipeline{
     stages{
         stage('Checkout'){
             steps{
-                git branch: 'main', credentialsId: 'jenkins', url: 'git@github.com:devopsmoon/Java-App-1.git'
+                git branch: 'master', credentialsId: 'jenkins', url: 'git@github.com:devopsmoon/Java-App-1.git'
                 echo "welcome to devops world"
             }
         }
