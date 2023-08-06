@@ -48,7 +48,6 @@ version: '4.0.0'
         stage('Deploy to Servers'){
             steps{
                 sshagent(['ubuntu']){
-                    steps{
                         sh """
                         scp -o StrictHostKeyChecking=no target/*.war ubuntu@34.207.126.43:/opt/tomcat/webapps/
                         ssh -o StrictHostKeyChecking=no ubuntu@34.207.126.43 stoptomcat.sh
@@ -57,6 +56,6 @@ version: '4.0.0'
                     }
                 }
             }
-        }
+        
     }
 }
