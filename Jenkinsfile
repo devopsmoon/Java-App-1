@@ -45,7 +45,7 @@ version: '1.0.1'
             steps{
                 sshagent(['ubuntu']){
                     sh """
-                    ssh -o StrictHostKeyChecking=no target/*.war ubuntu@54.90.5.86:/opt/tomcat-9/webapps
+                    scp -o StrictHostKeyChecking=no target/*.war ubuntu@54.90.5.86:/opt/tomcat-9/webapps
                     ssh -o StrictHostKeyChecking=no ubuntu@54.90.5.86 stoptomcat.sh
                     ssh -o StrictHostKeyChecking=no ubuntu@54.90.5.86 startomcat
                     """
