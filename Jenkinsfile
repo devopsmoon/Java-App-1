@@ -41,5 +41,16 @@ repository: 'Java-App-Repo/',
 version: '1.0.1'
             }
         }
+        stage('Deploy to Server'){
+            steps{
+                sshagent(['ubuntu']){
+                    sh """
+                    ssh -o StrictHostKeyChecking target/*.war ubuntu@54.90.5.86:/opt/tomcat-9/webapps
+                    ssh -o StrictHostKeyChecking ubuntu@54.90.5.86 stoptomcat.sh
+                    ssh -o StrictHostKeyChecking ubuntu@54.90.5.86 startomcat
+                    """
+                }
+            }
+        }
     }
 }
