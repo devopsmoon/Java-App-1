@@ -9,5 +9,10 @@ pipeline{
                 git credentialsId: 'Jenkins', url: 'git@github.com:devopsmoon/Java-App-1.git'
             }
         }
+        stage('Build'){
+            steps{
+                sh 'mvn clean package'
+            }
+        }
     }
 }
